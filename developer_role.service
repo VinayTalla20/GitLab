@@ -1,0 +1,12 @@
+[Unit]
+Description=Developer Role Updater Service
+After=network.target
+
+[Service]
+User=
+WorkingDirectory=/etc/gitlab/Dev_role_for_new_user
+ExecStart=/etc/gitlab/Dev_role_for_new_user/myenv/bin/python /etc/gitlab/Dev_role_for_new_user/developer_role2.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
